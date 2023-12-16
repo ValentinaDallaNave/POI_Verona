@@ -20,7 +20,7 @@ const chiudi1 = document.getElementById("chiudi"); //button
 const chiudi2 = document.getElementById("chiudi2");//button
 let lista_POI = []; // lista
 
-//c
+//ciao
 function callback2(content) { //funzione per ottenere la lista dei POI
   console.log(content);
   lista_POI = JSON.parse(content.result); //lista_POI
