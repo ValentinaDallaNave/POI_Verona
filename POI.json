@@ -1,0 +1,52 @@
+{"POI":[
+  {
+    "id":0,
+    "nome": "la casa di Giulietta",
+    "lat":45.44247573582813,
+    "lon":10.998573584833414,
+    "descrizione":"La casa di Giulietta è un edificio civile medievale situato in via Cappello a Verona, a breve distanza dalla centrale piazza delle Erbe. Si tratta di uno dei luoghi shakespeariani di Verona.<br> L'edificio che ospita la casa di Giulietta è una casatorre di origine medievale, la cui presenza è attestata per la prima volta in documenti datati al 1351. Nella casatorre era presente la locanda del Cappello, di proprietà degli eredi di Antonio Cappello, testimoniata anche dalla presenza dello stemma del copricapo sulla chiave di volta dell'arco che affaccia verso il cortile interno. Fu proprio a causa dello stemma del cappello che tra XVIII e XIX secolo, quando si svolse la ricerca dei luoghi legati alla tragedia shakespeariana, l'edificio venne erroneamente associato alla famiglia Capuleti, ovvero i Cappelletti presenti (insieme ai Montecchi) nel Purgatorio di Dante Alighieri. Nonostante la proprietà cambiò diverse volte nel corso dei secoli, l’edificio mantenne la funzione di locanda, a cui si aggiunsero alcune botteghe artigiane<br>",
+    "url": ["https://i.postimg.cc/XZcz4qQ6/1.jpg","https://i.postimg.cc/WqtWGnjs/2.jpg","https://i.postimg.cc/Kk0p3W69/3.jpg", "https://i.postimg.cc/hfzZhppr/4.jpg","https://i.postimg.cc/ph6n3YNG/5.webp","https://i.postimg.cc/BLkXmSDR/6.webp"]
+  },
+  {
+    "id":1,
+    "nome":"Piazza dei Signori",
+    "lat":45.44348687494776,
+    "lon":10.9982525674444,
+    "descrizione":"Piazza dei Signori, conosciuta anche come Piazza Dante, è una piazza situata nel centro storico di Verona, adiacente apiazza delle Erbe. La piazza nasce nel Medioevo dallo sviluppo dei palazzi scaligeri, ed assume fin dall'inizio funzioni politiche, amministrative e di rappresentanza.<br> Piazza dei Signori fu il centro del potere della Verona Medievale e Veneziana, dal XII secolo alla fine del XVIII. Sulla piazza si affacciano palazzi di varie epoche e stili, in passato sedi di istituzioni di governo, che ne fanno oggi una delle piazze più belle d'Italia.<br> «Lì sono le gran corte d'i Signori<br>in loco de la eccelsa Signoria:<br> alcuni si è del popolo pretori,<br> et altri ha la milizia in sua bailia<br> (e questi sono in dignità magiori);<br> et altri tende a la tesoraria,<br> e hano i lor palazi tanto onore,<br> che basterebe a Iulo imperatore.»<br> (Francesco Corna da Soncino)",
+    "url": ["https://i.postimg.cc/ygTrKgCf/8.jpg", "https://i.postimg.cc/fV6PfQvv/2.jpg", "https://i.postimg.cc/wtLGW4fY/3.jpg", "https://i.postimg.cc/ts1f64FT/1.jpg", "https://i.postimg.cc/V5YVRRX2/5.jpg", "https://i.postimg.cc/MXdrrQDH/6.jpg", "https://i.postimg.cc/GThgmLcb/7.jpg", "https://i.postimg.cc/Fdvnwb8d/4.jpg"]
+  },
+  {
+    "id":2,
+    "nome":"Basilica di San Zeno",
+    "lat":45.44290905847717,
+    "lon":10.97939274602633,
+    "descrizione": "La Basilica di San Zeno è uno dei principali luoghi di culto cattolici di Verona e rappresenta un esempio significativo di architettura romanica. Costruita nel X secolo, la sua storia è intrinsecamente legata a San Zeno, vescovo di Verona e santo patrono della città. L'edificio attuale, sebbene abbia subito diverse trasformazioni nel corso dei secoli, conserva molte caratteristiche romaniche. La facciata è particolarmente notevole, con un portale decorato da sculture di stile romanico e da un magnifico rosone che domina la parte superiore. All'interno, la basilica presenta una pianta a tre navate, divise da colonne di marmo con capitelli scolpiti. Il capolavoro artistico principale della basilica è il Polittico di San Zeno, opera di Andrea Mantegna, risalente al XV secolo. Questo dipinto è collocato sull'altare maggiore e raffigura diverse scene della vita di San Zeno, contribuendo ad arricchire il patrimonio artistico e culturale della basilica. Un altro elemento di rilievo è la cripta, contenente le reliquie di San Zeno. Questo spazio sotterraneo è decorato con affreschi medievali che narrano episodi della vita del santo e aggiungono ulteriore fascino alla visita della basilica. La Basilica di San Zeno è anche famosa per la sua torre campanaria, che offre una vista panoramica sulla città di Verona. La torre, costruita in mattoni, è stata eretta in diverse fasi e rappresenta un elemento iconico nel panorama cittadino.<br>",
+    "url":
+    ["https://i.postimg.cc/26xbkybH/Basilica-San-Zeno1.jpg", "https://i.postimg.cc/ZRKBq3kW/Basilica-San-Zeno2.jpg", "https://i.postimg.cc/T3fCc7gF/Basilica-San-Zeno3.jpg", "https://i.postimg.cc/HnSsPPjz/Basilica-San-Zeno4.jpg", "https://i.postimg.cc/tTkXYmdb/Basilica-San-Zeno5.jpg", "https://i.postimg.cc/qqSKtR02/Basilica-San-Zeno6.jpg"]
+  },
+  {
+    "id":3,
+    "nome":"Piazza delle Erbe",
+    "lat":45.44303436239226, 
+    "lon":10.997263467963922,
+    "descrizione":"Piazza delle Erbe o piazza Erbe è la piazza più antica di Verona e si trova sopra l'area del Foro romano.<br> Nell'età romana era il centro della vita politica ed economica; con il tempo gli edifici romani hanno lasciato il posto a quelli medievali.<br>Il lato nord è occupato dall'antico palazzo del Comune, dalla Torre dei Lamberti, dalla Casa dei Giudici e dalle case dei Mazzanti. Il Iato ovest, quello più corto, è chiuso dal barocco Palazzo Maffei, adornato da diverse statue di dei greci: Giove, Ercole, Minerva, Venere, Mercurio e Apollo. La parte nord-occidentale della piazza era l'area del Campidoglio romano, che guardava verso il Foro. Molte abitazioni conservano resti di pitture a fresco. Lungo il lato sud si incontra la Casa dei Mercanti o Domus Mercatorum, un tempo sede della Banca Popolare di Verona. Le altre case, più anonime, ricordano per il rapporto altezza-larghezza le case-torri di origine comunale. Fra il 1884 e il 1951 la piazza fu interessata dai binari della rete tranviaria cittadina.<br>Il monumento più antico della piazza è la fontana sormontata dalla statua denominata Madonna Verona di epoca romana (datata 380) con successive integrazioni medievali. La fontana è opera di spoglio voluta da Cansignorio assemblando pezzi di epoca romana come da tradizione medievale nel periodo gotico in particolare, con grande vasca termale e statua proveniente dal Capitolium si dice un tempo fosse dorata, in occasione dell'opera idraulica di Cansignorio di portare l'acqua del torrente Lorì di Avesa fino a piazza Erbe.",
+  "url":["https://i.postimg.cc/9M1pXSbZ/Piazza-Erbe1.jpg", "https://i.postimg.cc/2y6x1w9J/Piazza-Erbe2.jpg", "https://i.postimg.cc/j5jfcj6n/Piazza-Erbe3.jpg", "https://i.postimg.cc/7hFTqMFS/Piazza-Erbe4.jpg", "https://i.postimg.cc/brDtXFBz/Piazza-Erbe5.jpg", "https://i.postimg.cc/25GvnWWf/Piazza-Erbe6.jpg", "https://i.postimg.cc/9fCZ4brp/Piazza-Erbe7.jpg", "https://i.postimg.cc/TwHD4XQ7/Piazza-Erbe8.jpg", "https://i.postimg.cc/dVKTX6mY/Piazza-Erbe9.jpg", "https://i.postimg.cc/9F97JK9b/Piazza-Erbe10.jpg"]
+  },
+  {
+    "id":4,
+    "nome":"Arena di Verona",
+    "lat":45.43911622029108, 
+    "lon":10.994346667664395,
+    "descrizione":"L'Arena di Verona è un anfiteatro romano situato nel centro storico di Verona, icona della città veneta insieme alle figure di Romeo e Giulietta. Si tratta di uno dei grandi fabbricati che hanno caratterizzato l'architettura romana ed uno degli anfiteatri antichi giunto a noi con il miglior grado di conservazione, grazie ai sistematici restauri eseguiti fin dal Cinquecento; proprio per questo motivo, nonostante le numerose trasformazioni subite, esso consente al visitatore di poter facilmente comprendere la struttura di questo genere di edifici, rigorosamente soggetti alla funzione cui erano destinati ma dotati comunque di una essenziale bellezza. Durante i mesi estivi ospita il celebre festival lirico areniano, le cui stagioni si svolgono ininterrottamente dal 1913, mentre il resto dell'anno è meta di molti cantanti e musicisti internazionali.",
+    "url":["https://i.postimg.cc/jwfgCV67/1.jpg", "https://i.postimg.cc/0KxfQz2T/2.jpg", "https://i.postimg.cc/f3t5g4rr/3.jpg", "https://i.postimg.cc/DmTks5WT/4.jpg"]
+  },
+  {
+    "id":5,
+    "nome":"Ponte di Castelvecchio",
+    "lat":45.44059206816328, 
+    "lon":10.987239481157877,
+    "descrizione":"Il ponte di Castelvecchio, conosciuto anche come ponte scaligero, è un'opera infrastrutturale e militare situata a Verona lungo il fiume Adige, parte della fortezza di Castelvecchio e ritenuto l'opera più audace e mirabile del Medioevo veronese. Venne distrutto durante la seconda guerra mondiale e ricostruito nel 1951. Il ponte, appartenente al complesso di Castelvecchio, risulta essere un'opera ardita per il periodo in cui venne costruita. L'arcata maggiore è da alcuni studiosi considerata addirittura la più grande in Europa al tempo della sua costruzione, e aveva una dimensione utile ad agevolare il passaggio delle imbarcazioni. Il diverso dimensionamento dell'ampiezza degli archi e della mole dei piloni è da ricondurre ad uno studio della diversa distribuzione delle correnti in questo meandro del fiume; questo disegno particolare del ponte, ideato da un punto di vista prettamente funzionale e strutturale, ha comunque determinato una soluzione figurativa gotica e inedita.",
+    "url":["https://i.postimg.cc/vxVt352x/1.jpg", "https://i.postimg.cc/Cd3Nd6dG/2.jpg", "https://i.postimg.cc/RNwTtQnj/3.jpg", "https://i.postimg.cc/s1QmjRff/4.jpg"]
+  }
+  ]
+}

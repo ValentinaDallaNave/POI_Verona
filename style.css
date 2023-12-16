@@ -1,0 +1,54 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.float-container {
+  padding: 20px;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 20px;
+}
+
+.mint {
+  color: #03fc77;
+}
+
+.bg-mint {
+  background-color: #03fc77;
+  border-radius: 30px;
+  backdrop-filter: blur(1px);
+  box-shadow: 0 0 20px #03fc77;
+  padding: 50px 35px;
+}
+
+.form {
+  height: 520px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.13);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px #03fc77;
+  padding: 50px 35px;
+}
+
+.centro {
+  align-items: center;
+}
+
+.immagine {
+  height: 100%;
+  width: 100%;
+}
+
+.margine {
+  margin-top: 100 !important;
+  align-items: center;
+}
