@@ -3,6 +3,7 @@ const username = document.getElementById("username");
 const password = document.getElementById("password");
 const b_login = document.getElementById("b_login");
 const div_login = document.getElementById("div_login");
+const div_mappa = document.getElementById("v");
 const mappa = document.getElementById("mappa");
 const visualizzazione = document.getElementById("visualizzazione");
 const token = "9e5c0fd5-063b-46d3-865b-3914ac60f12c";
@@ -20,6 +21,8 @@ function callback(content) {
     get(token, callback2);
     div_login.classList.remove("d-block");
     div_login.classList.add("d-none");
+    div_mappa.classList.remove("d-none");
+    div_mappa.classList.add("d-block");
     visualizzazione.classList.remove("d-none");
     visualizzazione.classList.add("d-block");
   }
@@ -32,6 +35,21 @@ function callback(content) {
 
 b_login.onclick = () => {
   login(callback, token, username.value, password.value);
+}
+
+mappa.onclick = () => {
+  console.log("ciao");
+  const mapp = document.getElementById("mapp");
+  visualizzazione.classList.remove("d-block");
+  visualizzazione.classList.add("d-none");
+  mapp.classList.remove("d-none");
+  mapp.classList.add("d-block");
+  const map = new ol.Map({ target: document.querySelector('.map') });
+  setLayers(map);
+  setCenter(map, [,]);
+  setZoom(map, 12);
+  addMarker(map, { lonlat: [,], name: "" });
+  addMarker(map, { lonlat: [,], name: "" });
 }
 
 function render() {
@@ -61,7 +79,7 @@ function render() {
   lista_POI.forEach((element, index) => {
     html += template.replace("%nome", element.nome).replace("%url", element.url[0]).replace("dettaglio", "dettaglio" + index)
   })
-  visualizzazione.innerHTML += html
+  visualizzazione.innerHTML = html
   const dettaglio = document.querySelectorAll(".dettaglio")
   dettaglio.forEach((element) => {
     element.onclick = () => {
@@ -71,22 +89,6 @@ function render() {
     }
   })
 }
-
-mappa.onclick = () => {
-  console.log("ciao")
-  const mapp = document.getElementById("mapp");
-  visualizzazione.classList.remove("d-block");
-  visualizzazione.classList.add("d-none");
-  mapp.classList.remove("d-none");
-  mapp.classList.add("d-block");
-  const map = new ol.Map({ target: document.querySelector('.map') });
-  setLayers(map);
-  setCenter(map, [,]);
-  setZoom(map, 12);
-  addMarker(map, { lonlat: [,], name: "" });
-  addMarker(map, { lonlat: [,], name: "" });
-}
-
 
 function setLayers(map) {
   const layers = [new ol.layer.Tile({ source: new ol.source.OSM() })]; // crea un layer da Open Street Maps
