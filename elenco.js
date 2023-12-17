@@ -175,9 +175,7 @@ mappa.onclick = () => {
   })
   initOverlay(map);
   let html = ``;
-  let template = `<div class="row">
-  <button type="button" class="dettaglio btn btn-success" id="dettaglio">%nome</button>
-  </div><br>`;
+  let template = `<div class="row"><button type="button"  id="dettaglio" class="dettaglio btn btn-success">%nome</button></div><br>`;
   lista_POI.forEach((element) => {
     html += template.replace("%nome", element.nome).replace("dettaglio", "dettaglio" + element.id);
   })
