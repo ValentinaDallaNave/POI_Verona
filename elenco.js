@@ -15,6 +15,12 @@ function callback2(content) {
   render();
 }
 
+div_login.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    login(callback, token, username.value, password.value);
+  }
+});
+
 function callback(content) {
   content = JSON.parse(content.result);
   if (content === true) {
@@ -37,19 +43,15 @@ b_login.onclick = () => {
   login(callback, token, username.value, password.value);
 }
 
-mappa.onclick = () => {
-  console.log("ciao");
-  const mapp = document.getElementById("mapp");
-  visualizzazione.classList.remove("d-block");
-  visualizzazione.classList.add("d-none");
-  mapp.classList.remove("d-none");
-  mapp.classList.add("d-block");
-  const map = new ol.Map({ target: document.querySelector('.map') });
-  setLayers(map);
-  setCenter(map, [,]);
-  setZoom(map, 12);
-  addMarker(map, { lonlat: [,], name: "" });
-  addMarker(map, { lonlat: [,], name: "" });
+function pag_dettaglio() {
+  const dettaglio = document.querySelectorAll(".dettaglio")
+  dettaglio.forEach((element) => {
+    element.onclick = () => {
+      let index = parseInt(element.id.replace("dettaglio", ""), 10);
+      let url = `https://point-of-interest-docente-5binf-tpsi-2023-2024-3.docente-5binf-tpsi-2023-2024.repl.co/singolo.html?id=${index}`;
+      window.open(url, "_self");
+    }
+  })
 }
 
 function render() {
@@ -76,18 +78,28 @@ function render() {
   </div>
    <div class="col"></div>
    </div>`;
-  lista_POI.forEach((element, index) => {
-    html += template.replace("%nome", element.nome).replace("%url", element.url[0]).replace("dettaglio", "dettaglio" + index)
+  lista_POI.forEach((element) => {
+    html += template.replace("%nome", element.nome).replace("%url", element.url[0]).replace("dettaglio", "dettaglio" + element.id)
   })
   visualizzazione.innerHTML = html
-  const dettaglio = document.querySelectorAll(".dettaglio")
-  dettaglio.forEach((element) => {
-    element.onclick = () => {
-      let index = parseInt(element.id.replace("dettaglio", ""), 10);
-      let url = `https://point-of-interest-docente-5binf-tpsi-2023-2024-3.docente-5binf-tpsi-2023-2024.repl.co/singolo.html?id=${index}`;
-      window.open(url, "_self");
-    }
-  })
+  pag_dettaglio()
+
+}
+
+
+mappa.onclick = () => {
+  console.log("ciao");
+  const mapp = document.getElementById("mapp");
+  visualizzazione.classList.remove("d-block");
+  visualizzazione.classList.add("d-none");
+  mapp.classList.remove("d-none");
+  mapp.classList.add("d-block");
+  const map = new ol.Map({ target: document.querySelector('.map') });
+  setLayers(map);
+  setCenter(map, [,]);
+  setZoom(map, 12);
+  addMarker(map, { lonlat: [,], name: "" });
+  addMarker(map, { lonlat: [,], name: "" });
 }
 
 function setLayers(map) {

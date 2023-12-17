@@ -26,6 +26,12 @@ function callback2(content) {
   })
 }
 
+div_login.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    login(callback, token, username.value, password.value);
+  }
+});
+
 function callback(content) {
   //controllo del login
   content = JSON.parse(content.result);

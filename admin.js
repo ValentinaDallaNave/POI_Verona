@@ -43,6 +43,12 @@ function callback(content) { //funzione per controllare le credeziali del login
   }
 }
 
+div_login.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    login(callback, token, username.value, password.value);
+  }
+});
+
 button_login.onclick = () => {
   login(callback, token, username.value, password.value); //richiamo la funzione login da remote.js
 }
