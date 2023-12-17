@@ -180,15 +180,5 @@ mappa.onclick = () => {
     html += template.replace("%nome", element.nome).replace("dettaglio", "dettaglio" + element.id);
   })
   POI_bottoni.innerHTML = html;
-  const dettaglio = document.querySelectorAll(".dettaglio");
-  console.log(dettaglio)
-  dettaglio.forEach((element) => {
-    console.log(element.id)
-    element.onclick = () => {
-      console.log(element.nome)
-      let index = parseInt(element.id.replace("dettaglio", ""), 10);
-      let url = `https://point-of-interest-docente-5binf-tpsi-2023-2024-3.docente-5binf-tpsi-2023-2024.repl.co/singolo.html?id=${index}`;
-      window.open(url, "_self");
-    }
-  })
+  pag_dettaglio()
 }
