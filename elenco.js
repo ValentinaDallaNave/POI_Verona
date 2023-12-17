@@ -5,8 +5,15 @@ const b_login = document.getElementById("b_login");
 const div_login = document.getElementById("div_login");
 const div_mappa = document.getElementById("v");
 const mappa = document.getElementById("mappa");
+const mapp = document.getElementById("mapp");
+const elenco = document.getElementById("elenco");
 const visualizzazione = document.getElementById("visualizzazione");
 const token = "9e5c0fd5-063b-46d3-865b-3914ac60f12c";
+const POI_bottoni = document.getElementById("b_POI");
+const container = document.getElementById('popup');
+const content = document.getElementById('popup-content');
+const closer = document.getElementById('popup-closer');
+let overlay;
 let lista_POI = [];
 
 function callback2(content) {
@@ -44,9 +51,10 @@ b_login.onclick = () => {
 }
 
 function pag_dettaglio() {
-  const dettaglio = document.querySelectorAll(".dettaglio")
+  const dettaglio = document.querySelectorAll(".dettaglio");
   dettaglio.forEach((element) => {
     element.onclick = () => {
+      console.log(element.nome)
       let index = parseInt(element.id.replace("dettaglio", ""), 10);
       let url = `https://point-of-interest-docente-5binf-tpsi-2023-2024-3.docente-5binf-tpsi-2023-2024.repl.co/singolo.html?id=${index}`;
       window.open(url, "_self");
@@ -81,37 +89,28 @@ function render() {
   lista_POI.forEach((element) => {
     html += template.replace("%nome", element.nome).replace("%url", element.url[0]).replace("dettaglio", "dettaglio" + element.id)
   })
-  visualizzazione.innerHTML = html
-  pag_dettaglio()
-
+  visualizzazione.innerHTML = html;
+  pag_dettaglio();
 }
 
-
-mappa.onclick = () => {
-  console.log("ciao");
-  const mapp = document.getElementById("mapp");
-  visualizzazione.classList.remove("d-block");
-  visualizzazione.classList.add("d-none");
-  mapp.classList.remove("d-none");
-  mapp.classList.add("d-block");
-  const map = new ol.Map({ target: document.querySelector('.map') });
-  setLayers(map);
-  setCenter(map, [,]);
-  setZoom(map, 12);
-  addMarker(map, { lonlat: [,], name: "" });
-  addMarker(map, { lonlat: [,], name: "" });
+elenco.onclick = () => {
+  mapp.classList.remove("d-block");
+  mapp.classList.add("d-none");
+  visualizzazione.classList.remove("d-none");
+  visualizzazione.classList.add("d-block");
+  render();
 }
 
 function setLayers(map) {
-  const layers = [new ol.layer.Tile({ source: new ol.source.OSM() })]; // crea un layer da Open Street Maps
-  map.addLayer(new window.ol.layer.Group({ layers })); // lo aggiunge alla mappa
+  const layers = [new ol.layer.Tile({ source: new ol.source.OSM() })];
+  map.addLayer(new window.ol.layer.Group({ layers }));
 }
 function setCenter(map, lonlat) {
   const center = window.ol.proj.fromLonLat(lonlat);
-  map.getView().setCenter(center); //fissa il centro della mappa su una certa coppia di coordinate
+  map.getView().setCenter(center);
 }
 function setZoom(map, zoom) {
-  map.getView().setZoom(zoom); // fissa il livello di zoom
+  map.getView().setZoom(zoom);
 }
 function addMarker(map, point) {
   const feature = new ol.Feature({
@@ -131,4 +130,67 @@ function addMarker(map, point) {
     })
   });
   map.addLayer(layer);
+}
+function initOverlay(map, points) {
+  overlay = new ol.Overlay({
+    element: container,
+    autoPan: true,
+    autoPanAnimation: {
+      duration: 250
+    }
+  });
+  map.addOverlay(overlay);
+  closer.onclick = function() {
+    overlay.setPosition(undefined);
+    closer.blur();
+    return false;
+  };
+
+  map.on('singleclick', function(event) {
+    if (map.hasFeatureAtPixel(event.pixel) === true) {
+      map.forEachFeatureAtPixel(event.pixel, (feature, layer) => {
+        const coordinate = event.coordinate;
+        content.innerHTML = feature.name;
+        overlay.setPosition(coordinate);
+      })
+    } else {
+      overlay.setPosition(undefined);
+      closer.blur();
+    }
+  });
+
+}
+
+mappa.onclick = () => {
+  visualizzazione.classList.remove("d-block");
+  visualizzazione.classList.add("d-none");
+  mapp.classList.remove("d-none");
+  mapp.classList.add("d-block");
+  const map = new ol.Map({ target: document.querySelector('.map') });
+  setLayers(map);
+  setCenter(map, [10.9916215, 45.4383842]);
+  setZoom(map, 15);
+  lista_POI.forEach((element) => {
+    addMarker(map, { lonlat: [element.lon, element.lat], name: element.nome });
+  })
+  initOverlay(map);
+  let html = ``;
+  let template = `<div class="row">
+  <button type="button" class="dettaglio btn btn-success" id="dettaglio">%nome</button>
+  </div><br>`;
+  lista_POI.forEach((element) => {
+    html += template.replace("%nome", element.nome).replace("dettaglio", "dettaglio" + element.id);
+  })
+  POI_bottoni.innerHTML = html;
+  const dettaglio = document.querySelectorAll(".dettaglio");
+  console.log(dettaglio)
+  dettaglio.forEach((element) => {
+    console.log(element.id)
+    element.onclick = () => {
+      console.log(element.nome)
+      let index = parseInt(element.id.replace("dettaglio", ""), 10);
+      let url = `https://point-of-interest-docente-5binf-tpsi-2023-2024-3.docente-5binf-tpsi-2023-2024.repl.co/singolo.html?id=${index}`;
+      window.open(url, "_self");
+    }
+  })
 }
