@@ -112,8 +112,13 @@ invio.onclick = () => { //pressione del pulsante invio
       if (url.length === parseFloat(num) && nome !== "" && latitudine !== "" && longitudine !== "" && descrizione !== "") {
         salva.classList.remove("d-none"); //appare il tasto salva
         salva.classList.add("d-block");   // ""
-        let id = lista_POI.length
-        lista_POI.push({ id: id, nome: nome, lat: parseFloat(latitudine), lon: parseFloat(longitudine), descrizione: descrizione, url: url }); //aggiunta del POI nella lista
+        let id_lista = [];
+        lista_POI.forEach((element) => {
+          id_lista.push(element.id);
+        })
+        let id = id_lista[id_lista.length - 1];
+        console.log(id_lista, id)
+        lista_POI.push({ id: id + 1, nome: nome, lat: parseFloat(latitudine), lon: parseFloat(longitudine), descrizione: descrizione, url: url }); //aggiunta del POI nella lista
         console.log(lista_POI)
       }
     })
